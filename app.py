@@ -6,7 +6,7 @@ import google.generativeai as genai
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 #model = genai.GenerativeModel("gemini-flash-1.5")
 model = genai.GenerativeModel("gemini-pro")
-def my_output(query) -> str:
+def my_output(query):
     response = model.generate_content(query)
     return response.text
 
